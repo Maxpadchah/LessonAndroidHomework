@@ -1,95 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".MainActivity">
+    android:orientation = "vertical"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText"
+    android:background="@drawable/paper_texture_invoiced_gray_color">
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="118dp"
-        android:layout_height="37dp"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:background="#FFC107"
-        android:fontFamily="sans-serif-black"
-        android:text="Пользователь"
-        android:textAllCaps="true"
-        android:textColor="#B62424"
-        android:textStyle="bold|italic"
-        android:typeface="normal" />
-
-    <EditText
-        android:layout_width="wrap_content"
+   // Поле ввода
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:background="#F2F4F6"
-        android:hint="Сообщение"
-        android:textAllCaps="false"
-        android:textColor="#D10A0A"
-        android:textSize="18sp"
-        android:textStyle="bold|italic" />
+        android:orientation = "horizontal"
+        android:layout_gravity="right"
+        android:layout_weight = "6">
 
-    <Button
-        android:id="@+id/button111"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:clickable="true"
-        android:text="НАЖМИ"
-        app:backgroundTint="#009688"
-        app:iconTint="#7C1A1A"
-        app:strokeColor="#CF4848"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="329dp" />
+     <TextView
+         android:id="@+id/tv_console"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginRight="6dp"
+         android:gravity="center_vertical|right"
+         android:text="13+25"
+         android:textAllCaps="false"
+         android:textSize="50sp"
+         android:textStyle="bold" />
+    </LinearLayout>
 
-    <Switch
-        android:id="@+id/switch1"
+    // Поле для кнопки стереть
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:text="Запомнить меня"
-        android:textAllCaps="true"
-        android:textColor="#AF0E0E"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="415dp" />
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:background="#E1EAD6"
-        android:lineSpacingExtra="5sp"
-        android:text="Мужской"
-        android:textAllCaps="true"
-        android:textColor="#019A8C"
-        android:textStyle="bold|italic"
-        app:buttonTint="#03A9F4"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="459dp" />
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="6dp"
+         android:textSize="30sp"
+         android:textColor="@color/green"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_close"
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
+        />
+    </LinearLayout>
+
+    // Поле кнопок С, (), %, /
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="5dp"
-        android:background="#F44336"
-        android:text="Выйти"
-        android:textAllCaps="true"
-        android:textColor="#3F51B5"
-        android:textOff="OFF"
-        android:textSize="14sp"
-        android:textStyle="italic"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="517dp" />
+        android:layout_height="35dp"
+        android:orientation = "horizontal"
+        android:layout_weight= "1"
+        android:layout_gravity="center_horizontal">
+     <Button
+         android:id="@+id/button2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:textColor="@color/red"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button__C"
+         />
+     <Button
+         android:id="@+id/button3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:layout_marginRight="@dimen/button_indent"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:textColor="@color/green"
+         android:text="@string/button_scoba"/>
+     <Button
+         android:id="@+id/button4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:textColor="@color/green"
+         android:layout_marginRight="@dimen/button_indent"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_Pr"/>
+     <Button
+         android:id="@+id/button5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:textColor="@color/green"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_del"/>
+    </LinearLayout>
+
+    // Поле кнопок 7, 8, 9, *
+
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="35dp"
+     android:layout_gravity="center_horizontal"
+     android:layout_weight="1"
+     android:orientation="horizontal">
+
+  <Button
+      android:id="@+id/button6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/button_indent"
+      android:layout_weight="1"
+      android:text="@string/button_7"
+      android:backgroundTint="@color/grey"
+      android:backgroundTintMode="@color/black"
+      android:textSize="@dimen/text_size" />
+
+  <Button
+      android:id="@+id/button7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/button_indent"
+      android:layout_weight="1"
+      android:text="@string/button_8"
+      android:backgroundTint="@color/grey"
+      android:backgroundTintMode="@color/black"
+      android:textSize="@dimen/text_size" />
+
+  <Button
+      android:id="@+id/button8"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/button_indent"
+      android:layout_weight="1"
+      android:text="@string/button_9"
+      android:backgroundTint="@color/grey"
+      android:backgroundTintMode="@color/black"
+      android:textSize="@dimen/text_size" />
+
+  <Button
+      android:id="@+id/button9"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/button_mul"
+      android:textColor="@color/green"
+      android:backgroundTint="@color/grey"
+      android:backgroundTintMode="@color/black"
+      android:textSize="@dimen/text_size" />
+ </LinearLayout>
+
+    // Поле кнопок 4, 5, 6, -
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation = "horizontal"
+        android:layout_weight = "1"
+        android:layout_gravity="center_horizontal">
+     <Button
+         android:id="@+id/button10"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_4"/>
+     <Button
+         android:id="@+id/button11"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_5"/>
+     <Button
+         android:id="@+id/button12"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_6"/>
+     <Button
+         android:id="@+id/button13"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:textColor="@color/green"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_min"
+         />
+    </LinearLayout>
+
+    // Поле кнопок 1, 2, 3, +
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation = "horizontal"
+        android:layout_weight = "1"
+        android:layout_gravity="center_horizontal">>
+     <Button
+         android:id="@+id/button14"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_1"/>
+     <Button
+         android:id="@+id/button15"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_2"/>
+     <Button
+         android:id="@+id/button16"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_3"/>
+     <Button
+         android:id="@+id/button17"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:textColor="@color/green"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_plus"/>
+    </LinearLayout>
+
+    // Поле кнопок +/-, 0, , =
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation = "horizontal"
+        android:layout_weight = "1"
+        android:layout_gravity="center_horizontal">>
+     <Button
+         android:id="@+id/button18"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_char"/>
+     <Button
+         android:id="@+id/button19"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_0"/>
+     <Button
+         android:id="@+id/button20"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginRight="@dimen/button_indent"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/grey"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_Pr"/>
+     <Button
+         android:id="@+id/button21"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:textSize="@dimen/text_size"
+         android:backgroundTint="@color/green"
+         android:backgroundTintMode="@color/black"
+         android:text="@string/button_raw"/>
+    </LinearLayout>
+
 
 </LinearLayout>
